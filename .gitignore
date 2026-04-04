@@ -1,0 +1,36 @@
+# Gradle files
+.gradle/
+build/
+**/build/
+*.main.kts
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Android specific
+captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+
+# iOS / Xcode
+iosApp/build/
+iosApp/DerivedData/
+iosApp/*.xcodeproj/xcuserdata/
+iosApp/*.xcodeproj/project.xcworkspace/xcuserdata/
+iosApp/*.xcworkspace/xcuserdata/
+iosApp/Pods/
+.scripts/
+
+# Kotlin Multiplatform
+.kotlin/
+**/build/
+**/bin/
+
+# OS specific
+.DS_Store
+Thumbs.db
