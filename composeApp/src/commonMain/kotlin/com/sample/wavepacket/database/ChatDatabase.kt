@@ -39,7 +39,6 @@ abstract class ChatDatabase : RoomDatabase() {
     abstract fun chatDao(): ChatDao
 }
 
-// The Room compiler generates the implementation of this class
 expect object ChatDatabaseConstructor : RoomDatabaseConstructor<ChatDatabase> {
     override fun initialize(): ChatDatabase
 }

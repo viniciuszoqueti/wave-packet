@@ -6,14 +6,15 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.sample.wavepacket.di.sharedModule
-import org.koin.compose.KoinApplication
-import org.koin.dsl.module
+import org.koin.android.ext.android.inject
 
 class MainActivity : ComponentActivity() {
+    private val permissionManager: AndroidPermissionManager by inject()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+        permissionManager.register(this)
 
         setContent {
             App()
